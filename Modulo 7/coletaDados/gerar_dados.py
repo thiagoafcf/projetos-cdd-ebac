@@ -5,7 +5,7 @@ from faker import Faker
 # Define que o Faker vai usar dados BR. Ver na documentação do faker sobre Locales
 faker = Faker('pt_BR')
 
-# Cria tupla vazia para receber os dados
+# Cria lista vazia para receber os dados
 dados_pessoas = []
 
 # Cria os dados falsos
