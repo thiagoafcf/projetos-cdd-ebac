@@ -33,5 +33,24 @@ def receber_arquivo(file_url):
         print('Erro ao baixar o arquivo.', requisicao.json())
 
 
-link = enviar_arquivo(caminho)
-receber_arquivo(link)
+def enviar_arquivo_chave(file_path):
+    # Informa a chave de API para autorização
+    api_key = 'XPMDT2R.FTYS2GQ-ZGHMHN2-G2SSQTB-0SXRTTB'
+
+    requisicao = requests.post(
+        'https://file.io',
+        files={'file': open(file_path, 'rb')},
+        headers={'Authorization': api_key}  # Inclui a chave de autorização na requisição
+    )
+    saida_requisicao = requisicao.json()
+
+    print(saida_requisicao)
+    url = saida_requisicao['link']
+    print('Arquivo enviado com chave. Link para acesso:', url)
+    return url
+
+
+# link = enviar_arquivo(caminho)
+# receber_arquivo(link)
+link_chave = enviar_arquivo_chave(caminho)
+receber_arquivo(link_chave)
