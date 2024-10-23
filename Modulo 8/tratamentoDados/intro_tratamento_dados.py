@@ -1,6 +1,6 @@
 import pandas as pd
 
-df = pd.read_csv('clientes.csv')
+df = pd.read_csv('clientes_bruto.csv')
 
 # Verificar primeiros registros
 print(df.head().to_string())  # Mostra o início do DF

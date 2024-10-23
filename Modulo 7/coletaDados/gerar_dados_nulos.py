@@ -47,4 +47,4 @@ df = gerar_dados_nulos_outliers(5000, 100)
 print(df.head())
 print(df.tail())
 
-df.to_csv('clientes_bruto.csv', index=None)
+df.to_csv('clientes_bruto.csv', index=False)
