@@ -30,13 +30,11 @@ print('\nDataFrame após codificação ordinal para "nivel_educacao":\n', df.hea
 
 # Transformar 'area_atuacao' em categorias codificadas usando o metodo .cat.codes
 # Diferentemente do metodo anterior, aqui não precisamos criar um dicionário.
-# Isso é útil quando temos numerosos valores únicos na nossa coluna (não é tanto o caso desse exemplo)
-# A desvantagem é não saber quais são os valores estão associados a qual número.
-# Você teria que imprimir uma lista para saber.
+# Isso é útil quando temos numerosos valores únicos na nossa coluna (não é tanto o caso desse exemplo).
 df['area_atuacao_cod'] = df['area_atuacao'].astype('category').cat.codes
 print('\nDataFrame após transformar "area_atuacao" em códigos numéricos:\n', df.head())
-# A desvantagem é não saber quais são os valores estão associados a qual número.
-# Você teria que imprimir uma lista para saber. Pode-se usar o seguinte código:
+# A desvantagem é não saber quais são os valores associados a qual número.
+# Seria necessário imprimir uma lista para saber. Pode-se usar o seguinte código:
 df['area_atuacao'] = df['area_atuacao'].astype('category')
 print("\nAssociações entre os valores e os códigos:")
 for codigo, valor in enumerate(df['area_atuacao'].cat.categories):
