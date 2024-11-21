@@ -19,6 +19,9 @@ print(df.head())
 # O .get_dummies está criando colunas binárias (0 ou 1) para cada categoria única da variável estado_civil
 df = pd.concat([df, pd.get_dummies(df['estado_civil'], prefix='estado_civil',)], axis=1)
 print('\nNovo DataFrame após codificação one-hot para "estado_civil":\n', df.head())
+# Essa técnica é usada para transformar variáveis categóricas em várias colunas binárias,
+# onde cada coluna representa uma categoria. Ela é útil quando as variáveis categóricas não têm uma ordem inerente
+# e devem ser tratadas de forma binária.
 
 # Codificação ordinal para 'nivel_educacao'
 # Criamos um dicionário com os valores únicos da coluna em questão e os associamos a um número

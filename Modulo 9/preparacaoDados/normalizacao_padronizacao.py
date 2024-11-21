@@ -12,6 +12,7 @@ print(df.tail())
 df = df[['idade', 'salario']]
 
 # Normalização - MinMaxScaler
+# A normalização Min-Max traz os valores para uma escala comum, mesmo sem uma distribuição normal.
 scaler = MinMaxScaler()
 df['idadeMinMaxScaler'] = scaler.fit_transform(df[['idade']])  # Normaliza os valores para uma escala entre 0 e 1
 df['salarioMinMaxScaler'] = scaler.fit_transform(df[['salario']])
