@@ -1,3 +1,8 @@
+# Normalização e padronização são conceitos diferentes;
+# normalização ajusta os valores para uma escala específica,
+# enquanto padronização ajusta os dados para uma média de zero e desvio padrão de um.
+
+
 import pandas as pd
 from sklearn.preprocessing import RobustScaler, MinMaxScaler, StandardScaler
 
