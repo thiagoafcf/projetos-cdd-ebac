@@ -1,6 +1,7 @@
 '''
 A biblioteca Seaborn é baseada no matplotlib, mas tem um foco a mais em estatísticas. Ela possui alguns recursos que
-facilitam a visualização e o agrupamento de dados.
+facilitam a visualização e o agrupamento de dados. Oferece uma interface de alto nível para a criação de gráficos
+estatísticos atraentes e informativos.
 '''
 
 import matplotlib.pyplot as plt
@@ -21,7 +22,8 @@ plt.show()
 # Gráfico de Densidade
 '''
 É um tipo de histograma, mas faz a suavização das colunas fazendo uma linha contínua. É mais bonito, porém pode gerar 
-alguns erros de interpretação.
+alguns erros de interpretação, como potencialmente esconder picos acentuados que seriam visíveis em um histograma 
+tradicional. São úteis para identificar padrões e tendências em grandes conjuntos de dados.
 '''
 plt.figure(figsize=(10, 6))
 sns.kdeplot(df['salario'], fill=True, color='#863e9c')
@@ -32,6 +34,7 @@ plt.show()
 # Gráfico de Pairplot - Dispersão e Histograma
 '''
 Faz gráficos de dispersão e histograma relacionando todos os campos que informarmos, exceto campos de texto.
+É útil para explorar correlações e distribuições.
 Tutorial de como usar as cores
 https://seaborn.pydata.org/tutorial/color_palettes.html
 '''
@@ -40,7 +43,8 @@ plt.show()
 
 # Gráfico de Regressão
 '''
-Usado para entender como está a relação entre os dados
+Usado para entender como está a relação entre os dados. Gráficos que mostram a relação entre variáveis e ajudam a 
+visualizar tendências e padrões nos dados. São frequentemente usados para prever valores e identificar correlações.
 '''
 sns.regplot(x='idade', y='salario', data=df, color='#278f65', scatter_kws={'alpha': 0.5, 'color': '#34c289'})
 plt.title('Regressão de Salário por Idade')
